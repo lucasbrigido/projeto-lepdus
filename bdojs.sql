@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 24-Out-2018 às 00:28
+-- Generation Time: 24-Out-2018 às 07:07
 -- Versão do servidor: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -1974,7 +1974,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   KEY `notifications_context_id_user_id` (`context_id`,`user_id`,`level`),
   KEY `notifications_context_id` (`context_id`,`level`),
   KEY `notifications_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `notifications`
@@ -2111,7 +2111,9 @@ INSERT INTO `plugin_settings` (`plugin_name`, `context_id`, `setting_name`, `set
 ('webfeedplugin', 1, 'enabled', '1', 'bool'),
 ('webfeedplugin', 1, 'displayPage', 'homepage', 'string'),
 ('webfeedplugin', 1, 'displayItems', '1', 'bool'),
-('defaultthemeplugin', 1, 'baseColour', '#1e6292', 'text');
+('defaultthemeplugin', 1, 'baseColour', '#1e6292', 'text'),
+('customblockmanagerplugin', 1, 'enabled', '1', 'bool'),
+('doipubidplugin', 1, 'enabled', '1', 'bool');
 
 -- --------------------------------------------------------
 
@@ -2435,12 +2437,12 @@ CREATE TABLE IF NOT EXISTS `scheduled_tasks` (
 --
 
 INSERT INTO `scheduled_tasks` (`class_name`, `last_run`) VALUES
-('plugins.generic.usageStats.UsageStatsLoader', '2018-10-22 04:37:09'),
-('plugins.importexport.crossref.CrossrefInfoSender', '2018-10-22 04:37:15'),
-('plugins.importexport.datacite.DataciteInfoSender', '2018-10-22 04:37:17'),
-('plugins.importexport.doaj.DOAJInfoSender', '2018-10-22 04:37:17'),
-('plugins.importexport.medra.MedraInfoSender', '2018-10-22 04:37:17'),
-('lib.pkp.classes.task.ReviewReminder', '2018-10-22 04:37:18');
+('plugins.generic.usageStats.UsageStatsLoader', '2018-10-24 06:10:52'),
+('plugins.importexport.crossref.CrossrefInfoSender', '2018-10-24 06:10:55'),
+('plugins.importexport.datacite.DataciteInfoSender', '2018-10-24 06:10:58'),
+('plugins.importexport.doaj.DOAJInfoSender', '2018-10-24 06:10:58'),
+('plugins.importexport.medra.MedraInfoSender', '2018-10-24 06:10:58'),
+('lib.pkp.classes.task.ReviewReminder', '2018-10-24 06:10:58');
 
 -- --------------------------------------------------------
 
@@ -2541,7 +2543,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 --
 
 INSERT INTO `sessions` (`session_id`, `user_id`, `ip_address`, `user_agent`, `created`, `last_used`, `remember`, `data`, `domain`) VALUES
-('tau8e5hid6q8c9daifpt8u3gi7', 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 1539842702, 1540255161, 1, 'csrf|a:2:{s:9:\"timestamp\";i:1540255105;s:5:\"token\";s:32:\"5cc0b4628b02322f604929e0734ddcc0\";}currentLocale|s:5:\"pt_BR\";userId|s:1:\"1\";username|s:5:\"lucas\";', 'localhost');
+('tau8e5hid6q8c9daifpt8u3gi7', 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 1539842702, 1540364619, 1, 'csrf|a:2:{s:9:\"timestamp\";i:1540364602;s:5:\"token\";s:32:\"93c74b71161341bb37cda7e593a3341b\";}currentLocale|s:5:\"pt_BR\";userId|s:1:\"1\";username|s:5:\"lucas\";', 'localhost');
 
 -- --------------------------------------------------------
 
